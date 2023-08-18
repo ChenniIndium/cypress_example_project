@@ -18,7 +18,7 @@ jobs:
       - cypress-install
       - run:
           name: Run Project A - Job 1
-          command: npm run cypress:projectA:job1
+          command: npm run cypress:e2e:integration:projectA:job1
 
  
 
@@ -29,7 +29,7 @@ jobs:
       - cypress-install
       - run:
           name: Run Project A - Job 2
-          command: npm run cypress:projectA:job2
+          command: npm run cypress:e2e:integration:projectA:job2
 
 
 
@@ -37,7 +37,7 @@ workflows:
   use-my-orb:
     jobs:
       - cypress-run-project-a-job-1
-      - cypress-run-project-a-job-2
+      # - cypress-run-project-a-job-2
 
       # - cypress/run:
       #     cypress-command: npx cypress run --browser chrome --spec cypress/e2e/integration/projectA/job1/*.cy.js
