@@ -20,6 +20,7 @@ jobs:
       - cypress-install
       - run:
           name: Run Project A - Job 1
+          command: chmod +x ./node_modules/.bin/cypress
           command: npm run cypress:specific-folder
 
  
