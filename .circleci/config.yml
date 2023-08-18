@@ -38,5 +38,5 @@ workflows:
     jobs:
 
       - cypress/run:
-          # cypress-command: npx cypress run --browser chrome --spec cypress/e2e/integration/projectA/job1/todo.cy-spec.js
+          cypress-command: npx cypress run --browser chrome --spec cypress/e2e/integration/projectA/job1/*.cy.js
           install-browsers: true
