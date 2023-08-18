@@ -20,7 +20,7 @@ jobs:
       - cypress-install
       - run:
           name: Run Project A - Job 1
-          command: npm run cypress:e2e:integration:projectA:job1
+          command: npm run cypress:specific-folder
 
  
 

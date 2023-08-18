@@ -3,6 +3,6 @@
     "viewportWidth": 1280,
     "viewportHeight": 720,
     "defaultCommandTimeout": 5000,
-    "integrationFolder": "cypress/integration",
+    "integrationFolder": "cypress/e4e/integration",
     "testFiles": "**/*.js"
   }
