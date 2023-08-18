@@ -19,7 +19,7 @@ jobs:
       - checkout
       - cypress-install
       - run:
-          name: Run Project A - Job 1
+          name: Run ProjectA-Job1
           command: chmod +x ./node_modules/.bin/cypress
           command: npm run cypress:specific-folder
 
@@ -31,7 +31,7 @@ jobs:
       - checkout
       - cypress-install
       - run:
-          name: Run Project A - Job 2
+          name: ProjectA-Job2
           command: npm run cypress:e2e:integration:projectA:job2
 
 
