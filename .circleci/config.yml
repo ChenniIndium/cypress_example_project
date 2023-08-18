@@ -36,6 +36,7 @@ jobs:
 workflows:
   use-my-orb:
     jobs:
+
       - cypress/run:
-          cypress-command: npx cypress run --browser chrome
+          cypress-command: npx cypress run --browser chrome --spec cypress/e2e/integration/projectA/job1/todo.cy-spec.js
           install-browsers: true
