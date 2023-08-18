@@ -2,6 +2,15 @@ version: '2.1'
 orbs:
   cypress: cypress-io/cypress@3
 executor: cypress/default
+
+commands:
+  cypress-install:
+    steps:
+      - run:
+          name: Install Cypress
+          command: npm install
+
+
 workflows:
   use-my-orb:
     jobs:
