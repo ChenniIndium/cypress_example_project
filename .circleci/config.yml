@@ -12,29 +12,6 @@ commands:
           name: Install Cypress
           command: npm install
 
-jobs:
-  cypress-run-project-a-job-1:
-    executor: my-machine-executor
-    steps:
-      - checkout
-      - cypress-install
-      - run:
-          name: Run ProjectA-Job1
-          command: chmod +x ./node_modules/.bin/cypress
-          command: npm run cypress:specific-folder
-
- 
-
-  cypress-run-project-a-job-2:
-    executor: my-machine-executor
-    steps:
-      - checkout
-      - cypress-install
-      - run:
-          name: ProjectA-Job2
-          command: npm run cypress:e2e:integration:projectA:job2
-
-
 
 workflows:
   use-my-orb:
