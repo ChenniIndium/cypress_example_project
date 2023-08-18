@@ -10,6 +10,28 @@ commands:
           name: Install Cypress
           command: npm install
 
+jobs:
+  cypress-run-project-a-job-1:
+    executor: cypress-executor
+    steps:
+      - checkout
+      - cypress-install
+      - run:
+          name: Run Project A - Job 1
+          command: npm run cypress:projectA:job1
+
+ 
+
+  cypress-run-project-a-job-2:
+    executor: cypress-executor
+    steps:
+      - checkout
+      - cypress-install
+      - run:
+          name: Run Project A - Job 2
+          command: npm run cypress:projectA:job2
+
+
 
 workflows:
   use-my-orb:
