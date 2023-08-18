@@ -1,0 +1,47 @@
+version: '2.1'
+orbs:
+  cypress: cypress-io/cypress@3
+executors:
+  my-machine-executor:
+    machine: true
+
+commands:
+  cypress-install:
+    steps:
+      - run:
+          name: Install Cypress
+          command: npm install
+
+jobs:
+  cypress-run-project-a-job-1:
+    executor: my-machine-executor
+    steps:
+      - checkout
+      - cypress-install
+      - run:
+          name: Run Project A - Job 1
+          command: chmod +x ./node_modules/.bin/cypress
+          command: npm run cypress:specific-folder
+
+ 
+
+  cypress-run-project-a-job-2:
+    executor: my-machine-executor
+    steps:
+      - checkout
+      - cypress-install
+      - run:
+          name: Run Project A - Job 2
+          command: npm run cypress:e2e:integration:projectA:job2
+
+
+
+workflows:
+  use-my-orb:
+    jobs:
+      - cypress-run-project-a-job-1
+      # - cypress-run-project-a-job-2
+
+      # - cypress/run:
+      #     cypress-command: npx cypress run --browser chrome --spec cypress/e2e/integration/projectA/job1/*.cy.js
+      #     install-browsers: true
